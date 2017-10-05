@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <form class="col s12" action="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input class="waves-effect waves-light btn" type="submit" value="Login" />
+    </form>
+</div>
+    <div><a href="{% url 'tasks:signup' %}">Sign Up</a></div>
+
+{% endblock %}
